@@ -36,18 +36,18 @@ then
 fi
 
 echo -n ">> Plex:	"
-systemctl status plexmediaserver.service | grep -F active
+systemctl status plexmediaserver.service | sed -n 3p
 echo -n ">> Sonarr:	"
-systemctl status sonarr.service | grep -F active
+systemctl status sonarr.service | sed -n 3p
 echo -n ">> Radarr:	"
-systemctl status radarr.service | grep -F active
+systemctl status radarr.service | sed -n 3p
 echo -n ">> Jackett:	"
-systemctl status jackett.service | grep -F active
+systemctl status jackett.service | sed -n 3p
 echo -n ">> PowerTunnel:	"
-systemctl status pt.service | grep -F active
+systemctl status pt.service | sed -n 3p
 echo -n ">> PiHole:	"
-systemctl status pihole-FTL.service | grep -F active
+systemctl status pihole-FTL.service | sed -n 3p 
 echo -n ">> Unbound:	"
-systemctl status unbound.service | grep -F active
+systemctl status unbound.service | sed -n 3p
 echo ""
 
